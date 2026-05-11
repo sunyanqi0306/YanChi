@@ -31,12 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
-            // Prevent body scroll when menu is open
-            if (navLinks.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
         });
 
         // Close menu when a link is clicked
@@ -44,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
-                document.body.style.overflow = 'auto';
             });
         });
     }
